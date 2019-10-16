@@ -52,11 +52,7 @@ module.exports = {
       },
       wilayaId: {
         allowNull: false,
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Wilayas",
-          key: "id"
-        }
+        type: Sequelize.INTEGER
       },
       picture: {
         type: Sequelize.STRING

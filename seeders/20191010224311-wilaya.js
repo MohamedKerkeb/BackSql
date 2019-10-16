@@ -12,58 +12,58 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert("Wilaya", [
+    return queryInterface.bulkInsert("Wilayas", [
       {
         wilaya: "Adrar",
-        code: 01,
+        code: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         wilaya: "Chlef",
-        code: 02,
+        code: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         wilaya: "Lahgouat",
-        code: 03,
+        code: 3,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         wilaya: "Oum El Bouaghi",
-        code: 04,
+        code: 4,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         wilaya: "Batna",
-        code: 05,
+        code: 5,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         wilaya: "Béjaïa",
-        code: 06,
+        code: 6,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         wilaya: "Biskra",
-        code: 07,
+        code: 7,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         wilaya: "Béchar",
-        code: 08,
+        code: 8,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         wilaya: "Blida",
-        code: 09,
+        code: 9,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -300,7 +300,7 @@ module.exports = {
         code: 48,
         createdAt: new Date(),
         updatedAt: new Date()
-      },
+      }
     ]);
   },
 
@@ -312,6 +312,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('People', null, {});
     */
-    return queryInterface.bulkDelete('Wilaya', null, {})
+    return queryInterface.bulkDelete("Wilaya", null, {});
   }
 };

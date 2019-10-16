@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
   Wilaya.associate = function(models) {
     // associations can be defined here
     models.Wilaya.hasMany(models.Users);
-    models.Wilaya.hasMany(models.Advert);
+    models.Wilaya.hasMany(models.Categories);
   };
   return Wilaya;
 };
