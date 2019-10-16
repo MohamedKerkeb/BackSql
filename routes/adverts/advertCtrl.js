@@ -54,11 +54,21 @@ module.exports = {
   },
   searchAdvert: (req, res, next) => {
     let { WilayaId, CategoryId, title } = req.query;
-    let wId = WilayaId;
+    //let wId = WilayaId;
     models.Advert.findAll({
-      where: { title: { [Op.like]: "%" + title + "%" } }
+      where: {
+        title: { [Op.like]: "%" + title + "%" },
+        WilayaId: { [Op.like]: WilayaId },
+        CategoryId: { [Op.like]: CategoryId }
+      }
     })
-      .then(search => console.log(search))
+      .then(search => {
+        if (search) {
+          res.status(200).json(search);
+        } else {
+          res.status(404).json({ message: "Votre recherche n'aboutis pas" });
+        }
+      })
       .catch(err => console.log(err));
   }
 };
